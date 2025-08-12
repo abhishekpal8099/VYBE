@@ -74,7 +74,7 @@ socket?.on("newNotification",(noti)=>{
       <Route path='/signup' element={!userData?<SignUp/>:<Navigate to={"/"}/>}/>
        <Route path='/signin' element={!userData?<SignIn/>:<Navigate to={"/"}/>}/>
         <Route path='/' element={userData?<Home/>:<Navigate to={"/signin"}/>}/>
-       <Route path='/forgot-password' element={!userData?<ForgotPassword/>:<Navigate to={"/signin"}/>}/>
+       <Route path='/forgot-password' element={!userData?<ForgotPassword/>:<Navigate to={"/"}/>}/>
       <Route path='/profile/:userName' element={userData?<Profile/>:<Navigate to={"/signin"}/>}/>
       <Route path='/story/:userName' element={userData?<Story/>:<Navigate to={"/signin"}/>}/>
        <Route path='/upload' element={userData?<Upload/>:<Navigate to={"/signin"}/>}/>
